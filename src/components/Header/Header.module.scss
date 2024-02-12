@@ -1,0 +1,165 @@
+$green: #00A876;
+$shadow: rgba(0, 168, 118, 0.2);
+
+.header-container {
+    height: 100px;
+}
+
+.App-header {
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 168, 118, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.nav {
+    height: 100%;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo {
+    display: flex;
+    color: $green;
+    user-select: none;
+}
+
+.logo_img {
+    width: 57px;
+    height: 80px;
+    padding-right: 6px;
+    box-sizing: unset;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.logo_name {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo_name_item {
+    font-size: 20px;
+    line-height: 19px;
+}
+
+.logo_title {
+    font-size: 8.4px;
+    line-height: 10px;
+}
+
+.nav_links {
+    display: flex;
+    user-select: none;
+    line-height: 60px;
+    gap: 40px;
+
+    &_title {
+        font-weight: 400;
+        font-size: 20px;
+        color: black;
+        cursor: pointer;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    &_title-active {
+        color: $green !important;
+    }
+}
+
+.nav_link_route {
+    color: #00A876 !important;
+}
+
+.burger_button {
+    display: none;
+}
+
+.burger_list {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1240px) {}
+
+// media 1024px
+@media (min-width:768px) and (max-width:1024px) {
+    .nav {
+        &_links {
+            gap: 20px;
+        }
+    }
+}
+
+//media 767px
+@media (max-width:767px) {
+
+    .logo_name {
+        display: none;
+    }
+
+    .nav {
+        &_links {
+            display: none;
+        }
+    }
+
+    .burger {
+        &_button {
+            display: block;
+        }
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width: 100%;
+            text-align: center;
+        }
+
+        &_links {
+            font-weight: 400;
+            font-size: 20px;
+            color: black;
+            cursor: pointer;
+            padding: 15px;
+            background-color: #FFFFFF;
+            border-bottom: 1px solid $green;
+
+            &:hover {
+                color: $green;
+            }
+        }
+
+        &_button {
+            cursor: pointer;
+
+            & svg {
+                fill: black;
+
+                &:hover {
+                    fill: $green;
+                }
+            }
+        }
+    }
+}

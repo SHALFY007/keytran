@@ -1,0 +1,307 @@
+$green: #00A876;
+$shadow: rgba(0, 168, 118, 0.2);
+$orange-key: rgba(225, 175, 174, 1);
+$yello-key: rgba(226, 224, 173, 1);
+$green-key: rgba(173, 227, 176, 1);
+$blue-key: rgba(173, 226, 222, 1);
+$pink-key: rgba(223, 173, 226, 1);
+$purple-key: rgba(175, 175, 225, 1);
+
+.Keyboard {
+
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Arimo';
+    align-items: end;
+}
+
+.hand {
+    user-select: none;
+    padding: 0 10px;
+    position: relative;
+
+    &_img {
+        max-width: 100%;
+    }
+}
+
+
+.keyboard-base {
+    max-width: 1200px;
+    min-width: 750px;
+    padding: 2px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(5, 43px);
+    grid-gap: 5px;
+    user-select: none;
+}
+
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    grid-column: span 2;
+    font-size: 22px;
+    text-align: center;
+}
+
+.key:hover {
+    border: 2px solid #eeeeee;
+
+}
+
+.key.active {
+    box-shadow: 0 0 10px $green;
+    border: solid $green;
+}
+
+.key-words {
+    font-size: 14px;
+}
+
+.lh_finger_little,
+.lh_finger_ring,
+.lh_finger_middle,
+.lh_finger_idx,
+.rh_finger_little,
+.rh_finger_ring,
+.rh_finger_middle,
+.rh_finger_idx,
+.rh_finger_thumb {
+    position: absolute;
+    transition: all .12s;
+}
+
+.lh_finger_little {
+    top: 15%;
+    left: 10%;
+    width: 11%;
+    height: 27%;
+    transform: rotate(-20deg);
+    opacity: .9;
+    border-radius: 12px 14px 0 0;
+}
+
+.lh_finger_ring {
+    top: 3%;
+    left: 29%;
+    width: 11%;
+    height: 35%;
+    transform: rotate(3deg);
+    opacity: .8;
+    border-radius: 12px 14px 8px 0;
+}
+
+.lh_finger_middle {
+    top: 0;
+    left: 43%;
+    width: 11%;
+    height: 37%;
+    transform: rotate(9deg);
+    opacity: .8;
+    border-radius: 12px 14px 0 0;
+}
+
+.lh_finger_idx {
+    top: 6%;
+    left: 59%;
+    width: 12%;
+    height: 34%;
+    transform: rotate(20.5deg);
+    opacity: .8;
+    border-radius: 14px 16px 0 0;
+}
+
+.rh_finger_idx {
+    top: 6.5%;
+    left: 30%;
+    width: 11%;
+    height: 34%;
+    transform: rotate(-20deg);
+    opacity: .8;
+    border-radius: 12px 12px 0 0;
+}
+
+.rh_finger_middle {
+    top: -0.5%;
+    left: 46%;
+    width: 12%;
+    height: 38%;
+    transform: rotate(-9deg);
+    opacity: .8;
+    border-radius: 12px 12px 0 0;
+}
+
+.rh_finger_ring {
+    top: 3%;
+    left: 60.5%;
+    width: 11%;
+    height: 34%;
+    transform: rotate(-2.5deg);
+    opacity: .8;
+    border-radius: 12px 12px 0 0;
+}
+
+.rh_finger_little {
+    top: 14.5%;
+    left: 79%;
+    width: 11.5%;
+    height: 27%;
+    transform: rotate(21deg);
+    opacity: .8;
+    border-radius: 12px 12px 0 0;
+}
+
+.rh_finger_thumb {
+    top: 40%;
+    left: 15%;
+    width: 12%;
+    height: 27%;
+    transform: rotate(-50deg);
+    opacity: .8;
+    border-radius: 12px 40px 0 0;
+}
+
+.key-or {
+    background-color: $orange-key;
+}
+
+.key-ye {
+    background-color: $yello-key;
+}
+
+.key-gr {
+    background-color: $green-key;
+}
+
+.key-bl {
+    background-color: $blue-key;
+}
+
+.key-pi {
+    background-color: $pink-key;
+}
+
+.key-space {
+    background-color: $purple-key;
+}
+
+
+.delete {
+    grid-column: span 4;
+
+}
+
+.tab {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+
+}
+
+.backslash {
+    grid-column: span 3;
+
+}
+
+.capslock {
+    grid-column: span 4;
+
+}
+
+.return {
+    grid-column: span 4;
+
+}
+
+.leftshift {
+    grid-column: span 5;
+
+}
+
+.rightshift {
+    grid-column: span 5;
+
+}
+
+.ctrl {
+    grid-column: span 3;
+
+}
+
+
+.nonstyle {
+    //color: none;
+    //background-color: none;
+    opacity: 0;
+    border: none;
+
+    & :hover {
+        border: none;
+    }
+}
+
+
+.space {
+    grid-column: span 13;
+    background-color: $purple-key;
+}
+
+
+@media (max-width: 1100px) {
+    .Keyboard {
+        justify-content: center;
+    }
+
+    .keyboard-base {
+        min-width: 100%;
+    }
+
+    .hand {
+        display: none;
+    }
+}
+
+@media (max-width: 765px) {
+    .keyboard-base {
+        min-width: 100px;
+        gap: 4px;
+    }
+
+    .key {
+        font-size: 19px;
+        padding: 5px 12px;
+    }
+
+    .key-words {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 514px) {
+    .keyboard-base {
+        grid-template-rows: repeat(5, 28px);
+    }
+
+    .key {
+        font-size: 15px;
+        padding: 2px 4px 0 4px;
+    }
+
+    .key-words {
+        font-size: 8px;
+
+    }
+}
+
+
+@media (max-width: 375px) {
+    .Keyboard {
+        display: none;
+    }
+}

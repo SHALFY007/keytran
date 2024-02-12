@@ -1,0 +1,65 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arimo';
+}
+
+.App-footer {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px -30px 40px -30px rgba(0, 168, 118, 0.2);
+          box-shadow: 0px -30px 40px -30px rgba(0, 168, 118, 0.2);
+  position: relative;
+  z-index: 1;
+  min-height: 93px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer {
+  padding: 0 20px;
+}
+
+.footer_text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.socialicons_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+  padding-top: 10px;
+}
+
+.socialicons_link_item {
+  display: inline-block;
+}
+
+.socialicons_link_svg {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.socialicons_link_svg:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+/*# sourceMappingURL=Footer.module.css.map */

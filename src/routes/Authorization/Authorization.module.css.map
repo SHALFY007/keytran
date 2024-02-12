@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,qBAAqB,CAAC;EAClB,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,KAAK;EACvB,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,OAAO;EACf,OAAO,EAAE,IAAI;CAKhB;;AAZD,AASI,qBATiB,AAShB,MAAM,CAAC;EACJ,KAAK,EAbL,OAAO;CAcV",
+    "sources": [
+        "Authorization.module.scss"
+    ],
+    "names": [],
+    "file": "Authorization.module.css"
+}
