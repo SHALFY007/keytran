@@ -13,7 +13,7 @@ import PrivateRoutes from "../components/hocs/PrivateRoutes";
 const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home/>}>
+      <Route path="/" element={<Tasks/>}>
       </Route>
       <Route path="/tasks" element={<Tasks/>}></Route>
       <Route path="/rating" element={<Rating/>}></Route>
